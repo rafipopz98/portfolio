@@ -16,7 +16,7 @@ const PStyle = styled.div`
 
 function PText( props) {
   return (
-    <PStyle>
+    <PStyle className='para aa'>
     {props.brand}
     </PStyle>
   )

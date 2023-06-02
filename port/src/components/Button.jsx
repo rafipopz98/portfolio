@@ -18,7 +18,9 @@ const ButtonStyle = styled.div`
         color:${(props) =>
       props.outline ? 'transperant' : 'var(--gray-1)'};
     }
+    
   }
+  
   @media only screen and (max-width: 768px) {
     .button {
       font-size: 1.8rem;
