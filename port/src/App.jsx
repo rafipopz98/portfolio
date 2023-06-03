@@ -19,7 +19,7 @@ function App() {
             <Route exact path="/contact" element={<Contact />} > </Route>
           
           <Route  exact path="/" element={<Home />}>
-          </Route>
+          </Route> 
 
        
         </Routes>
