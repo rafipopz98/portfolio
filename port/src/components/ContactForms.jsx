@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import Fade from 'react-reveal'
 
 const FormStyle = styled.form`
   width: 100%;
@@ -45,7 +46,10 @@ export default function ContactForm() {
   const [message, setMessage] = useState('');
   return (
     <>
+      <Fade right>
       <FormStyle>
+
+     
         <div className="form-group">
           <label htmlFor="name">
             Your Name
@@ -84,6 +88,7 @@ export default function ContactForm() {
         </div>
         <button type="submit">Send</button>
       </FormStyle>
+      </Fade>
     </>
   );
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import FooterCol from './FooterCol';
 import PText from './PText';
-
+import { Slide } from 'react-reveal';
 const FooterStyle = styled.div`
   background-color: var(--deep-dark);
   padding-top: 10rem;
@@ -67,7 +67,8 @@ const FooterStyle = styled.div`
 export default function Footer() {
   return (
     <FooterStyle>
-      <div className="container">
+    <Slide bottom>
+    <div className="container">
         <div className="footer__col1">
           <h1 className="footer__col1__title">Muhammad Rafi</h1>
           <div className='abtmep'>
@@ -142,6 +143,10 @@ export default function Footer() {
           />
         </div>
       </div>
+        </Slide>
+     <Slide right>
+
+ 
       <div className="copyright">
         <div className="container">
           <div className='lastt'>
@@ -152,6 +157,7 @@ export default function Footer() {
           </div>
         </div>
       </div> 
+      </Slide>
     </FooterStyle>
   );
 }

@@ -6,6 +6,7 @@ import ProjectItem from './ProjectItem';
 import SectionTitle from './SectionTitle';
 import 'swiper/swiper-bundle.min.css';
 import Projects from '../assets/data/Projects';
+import Fade from 'react-reveal'
 
 // install Swiper modules
 SwiperCore.use([Navigation]);
@@ -59,8 +60,13 @@ const ProjectSectionStyle = styled.div`
 export default function ProjectsSection() {
   return (
     <ProjectSectionStyle>
+    
       <div className="container">
+      <Fade top>
         <SectionTitle subheading="some of my recent works" heading="Projects" />
+    </Fade>
+    <Fade bottom>
+
         <div className="projects__allItems">
           <Swiper
             spaceBetween={30}
@@ -95,6 +101,7 @@ export default function ProjectsSection() {
             })}
           </Swiper>
         </div>
+        </Fade>
       </div>
     </ProjectSectionStyle>
   );

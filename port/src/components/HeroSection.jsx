@@ -3,8 +3,8 @@ import styled from "styled-components";
 import Button from "./Button";
 import SocialMediaArrow from "../assets/images/social-media-arrow.svg";
 import ScrollDownArrow from "../assets/images/scroll-down-arrow.svg";
+import Fade from "react-reveal/Fade";
 import PText from "./PText";
-
 
 const HeroStyles = styled.div`
   .hero {
@@ -55,9 +55,11 @@ const HeroStyles = styled.div`
     left: 50px;
   }
   .hero__scrollDown {
+    width:180px;
+    bottom: 320px;
     right: 50px;
   }
-  
+
   .hero__social__indicator,
   .hero__scrollDown {
     width: 50px;
@@ -148,75 +150,91 @@ const HeroStyles = styled.div`
 `;
 
 export default function HeroSection() {
-    const p=
-    "I am a front-end development student, skilled in HTML, CSS, and JavaScript. I have a passion for design and creating visually appealing websites. I am a great team player and always looking to improve my skills. "
-       
+  const p =
+    "I am a front-end development student, skilled in HTML, CSS, and JavaScript. I have a passion for design and creating visually appealing websites. I am a great team player and always looking to improve my skills. ";
+
   return (
     <HeroStyles>
       <div className="hero">
         <div className="container">
           <h1 className="hero__heading">
-            <span>Hello, This is</span>
-            <span className="hero__name">Muhammad Rafi</span>
+            <Fade top>
+              <span>Hello, This is</span>
+            </Fade>
+            <Fade bottom>
+              <span className="hero__name">Muhammad Rafi</span>
+            </Fade>
           </h1>
           <div className="hero__img">
-            <img src="https://framerusercontent.com/images/Ym4C0IoPoC0FFoDNwFmHd9Y6CY.jpg?scale-down-to=4096" alt="" />
+            <img
+              src="https://framerusercontent.com/images/Ym4C0IoPoC0FFoDNwFmHd9Y6CY.jpg?scale-down-to=4096"
+              alt=""
+            />
           </div>
-          
+
           <div className="hero__info">
-            <PText   brand={p}/>
- 
-            <Button btnText="see my works" btnLink="/projects" />
+            <Fade top>
+              <PText brand={p} />
+            </Fade>
+
+            <Fade bottom>
+              <Button btnText="see my works" btnLink="/projects" />
+            </Fade>
           </div>
-          <div className="hero__social">
-            <div className="hero__social__indicator">
-              <p>Follow</p>
-              <img src={SocialMediaArrow} alt="icon" />
+          <Fade top>
+            <div className="hero__social">
+              <div className="hero__social__indicator">
+                <p>Follow</p>
+                <img src={SocialMediaArrow} alt="icon" />
+              </div>
+              <div className="hero__social__text">
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/muhammad-rafi-5ba799218/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      in
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://twitter.com/rafipopz"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      TW
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="http://isntagram.com/rafi_raff_popz"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      IG
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/rafipopz98"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      GIT
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div className="hero__social__text">
-              <ul>
-                <li>
-                  <a
-                    href="https://www.linkedin.com/in/muhammad-rafi-5ba799218/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >in
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://twitter.com/rafipopz"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    TW
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="http://isntagram.com/rafi_raff_popz"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    IG
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/rafipopz98"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    GIT
-                  </a>
-                </li>
-              </ul>
+          </Fade>
+          <Fade top>
+            <div className="hero__scrollDown">
+              <p>Scroll</p>
+              <img src={ScrollDownArrow} alt="ScrollDown Arrow" />
             </div>
-          </div>
-          <div className="hero__scrollDown">
-            <p>Scroll</p>
-            <img src={ScrollDownArrow} alt="ScrollDown Arrow" />
-          </div>
+          </Fade>
         </div>
       </div>
     </HeroStyles>

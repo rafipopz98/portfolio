@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Button from './Button';
 import PText from './PText';
 import SectionTitle from './SectionTitle';
-import AboutImg from '../assets/images/about-sec-img.png';
+import Fade from 'react-reveal/Fade';
 
 const AboutSectionStyles = styled.div`
   padding: 10rem 0;
@@ -92,19 +92,29 @@ export default function AboutSection() {
     <AboutSectionStyles>
       <div className="container">
         <div className="aboutSection__left">
+        <Fade left>
           <SectionTitle
             subheading="Let me introduce myself"
             heading="About Me"
           />
-          
+        
+      
           <PText    brand={uWu}/>
+          </Fade>
           <div className="aboutSection__buttons">
-            <Button  className="aboutSection__buttons1" btnText="Works" btnLink="/projects" />
-            <Button className="aboutSection__buttons2" btnText="Read More" btnLink="/about" outline />
+          <Fade bottom>
+             <Button  className="aboutSection__buttons1" btnText="Works" btnLink="/projects" />
+          </Fade>
+          <Fade bottom>
+            <Button className="aboutSection__buttons1" btnText="Read More" btnLink="/about" />
+          </Fade>
           </div>
         </div>
+    
         <div className="aboutSection__right">
+        <Fade right>
           <img className="aboutImg" src="https://i.pinimg.com/736x/1d/50/e7/1d50e74fcb8ce125f18aedb823cdc3e8.jpg" alt="Img" />
+        </Fade>
         </div>
       </div>
     </AboutSectionStyles>

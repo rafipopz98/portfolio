@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { MdClose, MdMenu } from 'react-icons/md';
+import Fade from 'react-reveal/Fade';
+
 
 const NavStyles = styled.nav`
   position: fixed;
   z-index: 100;
-  top: 0;
+  top: 20px;
   left: 0;
   width: 100%;
   padding: 1rem 0;
@@ -111,7 +113,9 @@ export default function NavMenu() {
         >
           <MdClose />
         </div>
+        <Fade left>
         <li>
+          
           <NavLink
             to="/"
             exact
@@ -122,7 +126,10 @@ export default function NavMenu() {
           >
             Home
           </NavLink>
+
         </li>
+        </Fade>
+        <Fade left>
         <li>
           <NavLink
             to="/about"
@@ -134,6 +141,8 @@ export default function NavMenu() {
             About
           </NavLink>
         </li>
+        </Fade>
+        <Fade right>
         <li>
           <NavLink
             to="/projects"
@@ -145,6 +154,8 @@ export default function NavMenu() {
             Projects
           </NavLink>
         </li>
+        </Fade>
+        <Fade right>
         <li>
           <NavLink
             to="/contact"
@@ -156,6 +167,7 @@ export default function NavMenu() {
             Contact
           </NavLink>
         </li>
+        </Fade>
       </ul>
     </NavStyles>
   );

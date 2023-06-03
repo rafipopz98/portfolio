@@ -4,7 +4,8 @@ import { MdSearch } from 'react-icons/md';
 import SectionTitle from '../components/SectionTitle';
 import ProjectsInfo from '../assets/data/Projects';
 import ProjectItem from '../components/ProjectItem';
-
+import Slide from 'react-reveal/Slide';
+import Fade from 'react-reveal'
 const ProjectStyle = styled.div`
   padding: 10rem 0;
   .projects__allItems {
@@ -67,11 +68,16 @@ export default function Projects() {
     <>
       <ProjectStyle>
         <div className="container">
+        <Fade top>
+
           <SectionTitle
             heading="Projects"
             subheading="some of my recent works"
           />
+        </Fade>
+          <Slide left>
           <div className="projects__searchBar">
+        
             <form>
               <input
                 type="text"
@@ -82,7 +88,9 @@ export default function Projects() {
               <MdSearch className="searchIcon" />
             </form>
           </div>
+        </Slide>
           <div className="projects__allItems">
+        <Slide bottom> 
             {projectsData.map((item) => (
               <ProjectItem
                 key={item.id}
@@ -91,6 +99,7 @@ export default function Projects() {
                 img={item.img}
               />
             ))}
+        </Slide>
           </div>
         </div>
       </ProjectStyle>

@@ -3,7 +3,7 @@ import { MdDesktopMac, MdCode, MdPhonelinkSetup } from 'react-icons/md';
 import styled from 'styled-components';
 import SectionTitle from './SectionTitle';
 import ServicesSectionItem from './ServicesSectionItems';
-
+import Fade from 'react-reveal'
 
 const ServicesItemsStyles = styled.div`
   padding: 10rem 0;
@@ -31,7 +31,10 @@ export default function ServicesSection() {
   return (
     <ServicesItemsStyles>
       <div className="container">
+      <Fade top>
         <SectionTitle subheading="Why should you " heading="HIRE ME ?" />
+      </Fade>
+      <Fade bottom>
         <div className="services__allItems">
           <ServicesSectionItem
             icon={<MdDesktopMac />}
@@ -49,6 +52,7 @@ export default function ServicesSection() {
             desc="I develop mobile application. I create mobile app with eye catching ui. "
           />
         </div>
+      </Fade>
       </div>
     </ServicesItemsStyles>
   );

@@ -4,6 +4,7 @@ import { MdEmail, MdLocalPhone } from 'react-icons/md';
 import ContactForm from './ContactForms';
 import ContactInfoItem from './ContactInfoItem';
 import SectionTitle from './SectionTitle';
+import { Fade } from 'react-reveal';
 
 const ContactSectionStyle = styled.div`
   padding: 10rem 0;
@@ -53,15 +54,22 @@ const ContactSectionStyle = styled.div`
 
 export default function ContactSection() {
   return (
+    
+
+  
     <ContactSectionStyle>
       <div className="container">
+      <Fade top>
         <SectionTitle heading="contact" subheading="get in touch" />
+      </Fade>
         <div className="contactSection__wrapper">
+        <Fade left>
           <div className="left">
             <ContactInfoItem icon={<MdLocalPhone />} text="+91 8296386973" />
             <ContactInfoItem icon={<MdEmail />} text="itsrealrafi@gmail.com" />
             <ContactInfoItem text="Banglore,India" />
           </div>
+    </Fade>
           <div className="right">
             <ContactForm />
           </div>

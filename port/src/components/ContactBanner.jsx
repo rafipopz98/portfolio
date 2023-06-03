@@ -3,6 +3,9 @@ import styled from "styled-components";
 import Button from "./Button";
 import PText from "./PText";
 
+import { Fade } from "react-reveal";
+
+
 const ContactBannerStyles = styled.div`
   padding: 5rem 0;
   .contactBanner__wrapper {
@@ -27,9 +30,14 @@ export default function ContactBanner() {
     <ContactBannerStyles>
       <div className="container">
         <div className="contactBanner__wrapper">
+        
           <h3 className="contactBanner__heading">Lets get Connected</h3>
+          <Fade top>
           <Button btnText="Contact Now" btnLink="/contact" />
+          </Fade>
+          <Fade bottom>
           <Button btnText="RESUME" btnLink="/resume" />
+          </Fade>
         </div>
       </div>
     </ContactBannerStyles>
