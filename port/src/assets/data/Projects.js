@@ -40,6 +40,13 @@ const Projects = [
     desc:
   'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, velit explicabo ipsum optio quidem recusandae tempore sequi autem debitis corporis possimus enim nesciunt!',
     img: 'https://pbs.twimg.com/media/EYDlBD8XkAAqPSn.jpg',
+  },
+  {
+    id: 7,
+    name: 'lolummyproject6',
+    desc:
+  'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, velit explicabo ipsum optio quidem recusandae tempore sequi autem debitis corporis possimus enim nesciunt!',
+    img: 'https://pbs.twimg.com/media/EYDlBD8XkAAqPSn.jpg',
   }
 ];
 
