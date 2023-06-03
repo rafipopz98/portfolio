@@ -177,7 +177,7 @@ export default function HeroSection() {
               <ul>
                 <li>
                   <a
-                    href="http://LinkedIn.com/"
+                    href="https://www.linkedin.com/in/muhammad-rafi-5ba799218/"
                     target="_blank"
                     rel="noreferrer"
                   >in
@@ -185,7 +185,7 @@ export default function HeroSection() {
                 </li>
                 <li>
                   <a
-                    href="http://twitter.com/"
+                    href="https://twitter.com/rafipopz"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -203,11 +203,11 @@ export default function HeroSection() {
                 </li>
                 <li>
                   <a
-                    href="http://google.com"
+                    href="https://github.com/rafipopz98"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    LI
+                    GIT
                   </a>
                 </li>
               </ul>
