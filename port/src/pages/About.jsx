@@ -44,6 +44,7 @@ const AboutPageStyles = styled.div`
     }
   }
   .right {
+    
     img {
       border: 2px solid var(--gray-1);
     }

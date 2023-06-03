@@ -59,10 +59,10 @@ const AboutSectionStyles = styled.div`
       color:rgb(255 255 255);
     }
     .aboutSection__right {
-      margin-top: 3rem;
-      position:absolute;
-      opacity:0.4;
-      top:82rem;
+      margin-top: 4rem;
+      ${'' /* position:absolute; */}
+      ${'' /* opacity:0.4; */}
+      ${'' /* top:82rem; */}
     
     color: rgb(255 255 255);
     }
