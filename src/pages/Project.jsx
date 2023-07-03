@@ -40,7 +40,7 @@ const ProjectStyle = styled.div`
   @media only screen and (max-width: 768px) {
     .projects__searchBar,
     .projects__searchBar form,
-    .projects__searchBar input {
+    .projects__searchBar input{ 
       width: 100%;
     }
   }
